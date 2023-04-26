@@ -20,33 +20,6 @@
     margin-top: 63px;
 }
 
-.buttons {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    margin-top: 61px;
-}
-
-.buttonsText {
-    align-self: center;
-    font-size: 18px;
-    line-height: 60px;
-    letter-spacing: 0.02em;
-    color: #0d5adc;
-    margin-right: 5px;
-}
-
-.button {
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    background: none;
-    font-size: 18px;
-    line-height: 60px;
-    letter-spacing: 0.02em;
-    color: #0d5adc;
-}
-
 /*      */
 
 .contentContainer {
@@ -69,39 +42,4 @@
     letter-spacing: 0.02em;
     color: #0d5adc;
     align-self: center;
-}
-
-.phoneContainer {
-    margin-left: 15px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 125px;
-}
-
-.phoneContent {
-}
-
-.phoneBox {
-    margin-left: 35px;
-    margin-bottom: 8px;
-    display: flex;
-    gap: 26px;
-}
-
-.phoneTitle {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    color: #3b4157;
-    margin-right: 12px;
-    margin-bottom: 74px;
-}
-
-.modalButton {
-    margin-top: 70px;
-}
-
-.image {
 }

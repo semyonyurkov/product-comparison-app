@@ -1,0 +1,26 @@
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 61px;
+}
+
+.buttonsText {
+    align-self: center;
+    font-size: 18px;
+    line-height: 60px;
+    letter-spacing: 0.02em;
+    color: #0d5adc;
+    margin-right: 5px;
+}
+
+.button {
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    font-size: 18px;
+    line-height: 60px;
+    letter-spacing: 0.02em;
+    color: #0d5adc;
+}

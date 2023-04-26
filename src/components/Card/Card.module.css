@@ -1,0 +1,26 @@
+.phoneContent {
+}
+
+.phoneBox {
+    margin-left: 35px;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 26px;
+}
+
+.phoneTitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #3b4157;
+    margin-right: 12px;
+    margin-bottom: 74px;
+}
+
+.modalButton {
+    margin-top: 70px;
+}
+
+.image {
+}
