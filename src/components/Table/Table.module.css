@@ -1,0 +1,54 @@
+.container {
+    background-color: #f4f9fc;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid #cdcfd2;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+thead th:nth-child(1) {
+    width: 30%;
+}
+
+thead th:nth-child(2) {
+    width: 20%;
+}
+
+thead th:nth-child(3) {
+    width: 15%;
+}
+
+thead th:nth-child(4) {
+    width: 35%;
+}
+
+th,
+td {
+    padding: 20px 0px 20px 0px;
+    text-align: start;
+}
+
+tr {
+    border-bottom: 1px solid #cdcfd2;
+}
+
+th {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #a4a9b9;
+}
+
+td {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3b4157;
+    text-align: start;
+    padding-left: 15px;
+}
