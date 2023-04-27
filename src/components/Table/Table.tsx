@@ -1,68 +1,27 @@
+import { useSelector } from 'react-redux';
 import styles from './Table.module.css';
+import { selectProducts } from '../../redux/slices/products';
+import { IState } from '../../redux/store';
 
 export const Table = () => {
+    const products = useSelector((state: IState) => selectProducts(state));
+
+    const newProducts = products.map((product, index) => {
+        return (
+            <>
+                <th key={index}>{product.title}</th>
+            </>
+        );
+    });
     return (
         <div className={styles.container}>
             <table className={styles.table}>
-                <tr className={styles.first}>
-                    <th>Заголовок 1</th>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 4</td>
+                <tr>
+                    <th>{products[0].properties[0].title}</th>
+                    <td>{newProducts}</td>
                 </tr>
-                <tr className={styles.second}>
-                    <th>Заголовок 1</th>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 5</td>
-                    <td>Ячейка 6</td>
-                </tr>
-                <tr className={styles.third}>
-                    <th>Заголовок 1</th>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 5</td>
-                    <td>Ячейка 6</td>
-                </tr>
-                <tr className={styles.fourth}>
-                    <th>Заголовок 1</th>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 5</td>
-                    <td>Ячейка 6</td>
-                </tr>
-                <tr className={styles.fifth}>
-                    <th>Заголовок 1</th>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 5</td>
-                    <td>Ячейка 6</td>
-                </tr>
-                <tr className={styles.sixth}>
-                    <th>Заголовок 1</th>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 5</td>
-                    <td>Ячейка 6</td>
-                </tr>
-                <tr className={styles.seventh}>
-                    <th>Заголовок 1</th>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 5</td>
-                    <td>Ячейка 6</td>
-                </tr>
-                <tr className={styles.eighth}>
-                    <th>Заголовок 1</th>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 5</td>
-                    <td>Ячейка 6</td>
-                </tr>
-                <tr className={styles.ninth}>
-                    <th>Заголовок 1</th>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 5</td>
-                    <td>Ячейка 6</td>
-                </tr>
-                <tr className={styles.tenth}>
-                    <th>Заголовок 1</th>
-                    <td>Ячейка 4</td>
-                    <td>Ячейка 5</td>
-                    <td>Ячейка 6</td>
+                <tr>
+                    <th>{products[0].properties[1].title}</th>
                 </tr>
             </table>
         </div>

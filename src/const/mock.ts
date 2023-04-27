@@ -1,9 +1,9 @@
-interface Iproperty {
+export interface Iproperty {
     value: string;
     title: string;
 }
 
-interface IProducts {
+export interface IProducts {
     title: string;
     image: string;
     properties: Iproperty[];

@@ -1,20 +1,21 @@
 import styles from './Card.module.css';
+import Popover from '../Popover/Popover';
 
-export const Card = () => {
+interface CardProps {
+    title: string;
+    image: string;
+}
+
+export const Card = (props: CardProps) => {
     return (
         <div className={styles.phoneContent}>
             <div className={styles.phoneBox}>
                 <div className={styles.image}>
-                    <img src="./images/iPhone12.jpg" alt="" />
+                    <img src={props.image} alt="" />
                 </div>
-                <div className={styles.modalButton}>
-                    <button hidden id="button"></button>
-                    <label htmlFor="button">
-                        <img src="./logos/Vector50.jpg" alt="" />
-                    </label>
-                </div>
+                <Popover />
             </div>
-            <div className={styles.phoneTitle}>Apple iPhone 12</div>
+            <div className={styles.phoneTitle}>{props.title}</div>
         </div>
     );
 };

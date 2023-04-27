@@ -42,6 +42,7 @@ th {
     line-height: 21px;
     text-transform: uppercase;
     color: #a4a9b9;
+    width: 200px;
 }
 
 td {
@@ -51,36 +52,4 @@ td {
     color: #3b4157;
     text-align: start;
     padding-left: 15px;
-}
-
-.first {
-    height: 89px;
-}
-
-.second {
-    height: 114px;
-}
-.third {
-    height: 114px;
-}
-.fourth {
-    height: 136px;
-}
-.fifth {
-    height: 114px;
-}
-.sixth {
-    height: 114px;
-}
-.seventh {
-    height: 108px;
-}
-.eighth {
-    height: 114px;
-}
-.ninth {
-    height: 114px;
-}
-.tenth {
-    height: 117px;
 }

@@ -1,0 +1,97 @@
+.modalButton {
+    margin-top: 70px;
+}
+.modalLabel {
+    cursor: pointer;
+}
+
+.container {
+    z-index: 10;
+    width: 421px;
+    height: 336px;
+    border: 1px solid black;
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 16px 32px rgba(35, 39, 51, 0.1);
+    overflow: hidden;
+    display: none;
+}
+.container.open {
+    display: block;
+}
+
+.inputbox {
+    background: white;
+    padding: 34px 0px 0px 18px;
+    position: absolute;
+    width: 80%;
+    height: 50px;
+}
+
+.input {
+    width: 335px;
+    height: 47px;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px;
+    font-size: 24px;
+    line-height: 28px;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    position: absolute;
+}
+
+.componentscontainer {
+    overflow-y: scroll;
+    height: 336px;
+    padding-top: 97px;
+    box-sizing: border-box;
+    margin: 0px 7px 0px 0px;
+}
+
+.componentscontainer::-webkit-scrollbar {
+    width: 20px;
+}
+
+.componentscontainer::-webkit-scrollbar-track {
+    background: white;
+    padding: 20px 12px 0px 0px;
+}
+
+.componentscontainer::-webkit-scrollbar-thumb {
+    background-color: #e3e3e3;
+    padding: 20px 12px 0px 0px;
+    border-radius: 20px;
+    border: 7.5px solid white;
+}
+
+.componentscontainer {
+    scrollbar-width: thin;
+    scrollbar-color: #e3e3e3 white;
+}
+
+.component {
+    display: flex;
+    gap: 19px;
+    margin: 0px 0px 0px 20px;
+}
+
+.button {
+    align-self: center;
+}
+
+.image {
+    width: 25px;
+    height: 50px;
+    align-self: center;
+}
+
+.title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+}
