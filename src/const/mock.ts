@@ -1,6 +1,12 @@
+export enum CellType {
+    Text,
+    Image,
+}
+
 export interface Iproperty {
     value: string;
     title: string;
+    type?: CellType;
 }
 
 export interface IProducts {
@@ -41,14 +47,17 @@ export const products: IProducts[] = [
             {
                 title: 'NFC',
                 value: './logos/SubtractX.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Подержка ESIM',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Стоимость',
@@ -87,14 +96,17 @@ export const products: IProducts[] = [
             {
                 title: 'NFC',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Подержка ESIM',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
                 value: './logos/SubtractX.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Стоимость',
@@ -133,14 +145,17 @@ export const products: IProducts[] = [
             {
                 title: 'NFC',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Подержка ESIM',
                 value: './logos/SubtractX.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Стоимость',
@@ -179,14 +194,17 @@ export const products: IProducts[] = [
             {
                 title: 'NFC',
                 value: './logos/SubtractX.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Подержка ESIM',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
                 value: './logos/SubtractX.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Стоимость',
@@ -225,14 +243,17 @@ export const products: IProducts[] = [
             {
                 title: 'NFC',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Подержка ESIM',
                 value: './logos/SubtractX.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Стоимость',
@@ -271,14 +292,17 @@ export const products: IProducts[] = [
             {
                 title: 'NFC',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Подержка ESIM',
                 value: './logos/SubtractV.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
                 value: './logos/SubtractX.jpg',
+                type: CellType.Image,
             },
             {
                 title: 'Стоимость',

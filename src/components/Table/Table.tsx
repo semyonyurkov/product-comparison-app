@@ -1,28 +1,26 @@
 import { useSelector } from 'react-redux';
 import styles from './Table.module.css';
-import { selectProducts } from '../../redux/slices/products';
+import { selectProperties } from '../../redux/slices/products';
 import { IState } from '../../redux/store';
+import { Row } from './Row';
 
 export const Table = () => {
-    const products = useSelector((state: IState) => selectProducts(state));
+    const properties = useSelector((state: IState) => selectProperties(state));
 
-    const newProducts = products.map((product, index) => {
+    const tableProducts = Object.entries(properties).map((property) => {
         return (
-            <>
-                <th key={index}>{product.title}</th>
-            </>
+            <Row
+                key={property[0]}
+                title={property[0]}
+                values={property[1].values}
+                type={property[1].type}
+            />
         );
     });
     return (
         <div className={styles.container}>
             <table className={styles.table}>
-                <tr>
-                    <th>{products[0].properties[0].title}</th>
-                    <td>{newProducts}</td>
-                </tr>
-                <tr>
-                    <th>{products[0].properties[1].title}</th>
-                </tr>
+                <tbody>{tableProducts}</tbody>
             </table>
         </div>
     );

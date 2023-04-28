@@ -1,7 +1,7 @@
 import styles from './Card.module.css';
 import Popover from '../Popover/Popover';
 
-interface CardProps {
+export interface CardProps {
     title: string;
     image: string;
 }
