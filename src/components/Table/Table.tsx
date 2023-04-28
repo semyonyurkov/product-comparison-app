@@ -4,7 +4,11 @@ import { selectProperties } from '../../redux/slices/products';
 import { IState } from '../../redux/store';
 import { Row } from './Row';
 
-export const Table = () => {
+interface TableProps {
+    isDifferenceShown: boolean;
+}
+
+export const Table = (props: TableProps) => {
     const properties = useSelector((state: IState) => selectProperties(state));
 
     const tableProducts = Object.entries(properties).map((property) => {
@@ -14,6 +18,7 @@ export const Table = () => {
                 title={property[0]}
                 values={property[1].values}
                 type={property[1].type}
+                isDifferenceShown={props.isDifferenceShown}
             />
         );
     });

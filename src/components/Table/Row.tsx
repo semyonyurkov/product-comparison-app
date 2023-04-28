@@ -4,6 +4,7 @@ interface IRowProps {
     title: string;
     values: string[];
     type?: CellType;
+    isDifferenceShown: boolean;
 }
 
 function renderValue(value: string, type?: CellType) {
@@ -18,6 +19,9 @@ function renderValue(value: string, type?: CellType) {
 }
 
 export const Row = (props: IRowProps) => {
+    if (props.isDifferenceShown && new Set(props.values).size === 1) {
+        return null;
+    }
     return (
         <tr>
             <td>{props.title}</td>

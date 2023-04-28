@@ -1,7 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { CellType, products } from '../../const/mock';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { CellType, IProducts, products } from '../../const/mock';
 import { IState } from '../store';
-import { useSelector } from 'react-redux';
 
 interface IRows {
     [key: string]: {
@@ -13,14 +12,47 @@ interface IRows {
 const productsSlice = createSlice({
     name: 'products',
     initialState: products,
-    reducers: {},
+    reducers: {
+        replaceProduct: (
+            state: IProducts[],
+            action: PayloadAction<{ replaceId: number; targetId: number }>
+        ) => {
+            const replaceIndex = state.findIndex(
+                (product) => product.id === action.payload.replaceId
+            );
+            const targetIndex = state.findIndex(
+                (product) => product.id === action.payload.targetId
+            );
+            const targetProduct = state[targetIndex];
+            // const targetProduct = state.splice(targetIndex, 1);
+            state = JSON.parse(JSON.stringify(state));
+            let newState = [
+                ...state.slice(0, replaceIndex),
+                targetProduct,
+                ...state.slice(targetIndex + 1),
+                state[replaceIndex],
+            ];
+            console.log(replaceIndex, targetIndex, state, newState);
+            newState = JSON.parse(JSON.stringify(newState));
+            return newState;
+        },
+    },
 });
 
+export const { replaceProduct } = productsSlice.actions;
+
 export const productsReducer = productsSlice.reducer;
+
+// selectors
 
 export const selectProducts = (state: IState) => {
     const currentNumDisplay = state.numDisplay;
     return state.products.slice(0, currentNumDisplay);
+};
+
+export const selectOtherProducts = (state: IState) => {
+    const currentNumDisplay = state.numDisplay;
+    return state.products.slice(currentNumDisplay, state.products.length);
 };
 
 export const selectProperties = (state: IState) => {

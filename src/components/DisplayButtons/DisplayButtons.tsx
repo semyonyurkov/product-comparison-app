@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './DisplayButtons.module.css';
 import { setNumber } from '../../redux/slices/numDisplay';
 import { IState } from '../../redux/store';
-import { selectProducts } from '../../redux/slices/products';
 
 interface IArr {
     start: number;
@@ -26,6 +25,7 @@ export const DisplayButtons = () => {
     for (let i = nums.start; i <= nums.end; i++) {
         arrOfButtons.push(
             <button
+                key={i}
                 onClick={() => setNumDipslay(i)}
                 className={activeButton === i ? styles.active : styles.button}
             >

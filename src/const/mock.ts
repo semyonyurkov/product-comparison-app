@@ -10,6 +10,7 @@ export interface Iproperty {
 }
 
 export interface IProducts {
+    id: number;
     title: string;
     image: string;
     properties: Iproperty[];
@@ -17,6 +18,7 @@ export interface IProducts {
 
 export const products: IProducts[] = [
     {
+        id: 1,
         title: 'Apple iPhone 12',
         image: './images/iPhone12.jpg',
         properties: [
@@ -66,6 +68,7 @@ export const products: IProducts[] = [
         ],
     },
     {
+        id: 2,
         title: 'Xiaomi Mi 11 Lite',
         image: './images/XiaomiMi11Lite.jpg',
         properties: [
@@ -115,6 +118,7 @@ export const products: IProducts[] = [
         ],
     },
     {
+        id: 3,
         title: 'Samsung Galaxy A72',
         image: './images/A72.jpg',
         properties: [
@@ -164,6 +168,7 @@ export const products: IProducts[] = [
         ],
     },
     {
+        id: 4,
         title: 'Apple iPhone Xr',
         image: './images/iPhoneXr.jpg',
         properties: [
@@ -213,6 +218,7 @@ export const products: IProducts[] = [
         ],
     },
     {
+        id: 5,
         title: 'Samsung Galaxy S21',
         image: './images/SamsungGalaxyS21.jpg',
         properties: [
@@ -262,6 +268,7 @@ export const products: IProducts[] = [
         ],
     },
     {
+        id: 6,
         title: 'Realme 8 Pro',
         image: './images/Realme8Pro.jpg',
         properties: [

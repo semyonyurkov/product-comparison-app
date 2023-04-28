@@ -4,6 +4,7 @@ import Popover from '../Popover/Popover';
 export interface CardProps {
     title: string;
     image: string;
+    id: number;
 }
 
 export const Card = (props: CardProps) => {
@@ -13,7 +14,7 @@ export const Card = (props: CardProps) => {
                 <div className={styles.image}>
                     <img src={props.image} alt="" />
                 </div>
-                <Popover />
+                <Popover productId={props.id} />
             </div>
             <div className={styles.phoneTitle}>{props.title}</div>
         </div>
