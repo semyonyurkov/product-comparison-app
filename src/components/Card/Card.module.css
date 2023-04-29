@@ -1,6 +1,9 @@
 .phoneContent {
     display: flex;
     flex-direction: column;
+    max-height: 248px;
+    height: 248px;
+    padding-top: 12px;
 }
 
 .phoneBox {

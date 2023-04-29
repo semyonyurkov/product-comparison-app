@@ -1,10 +1,10 @@
 export enum CellType {
     Text,
-    Image,
+    Boolean,
 }
 
 export interface Iproperty {
-    value: string;
+    value: string | boolean;
     title: string;
     type?: CellType;
 }
@@ -48,18 +48,18 @@ export const products: IProducts[] = [
             },
             {
                 title: 'NFC',
-                value: './logos/SubtractX.jpg',
-                type: CellType.Image,
+                value: false,
+                type: CellType.Boolean,
             },
             {
                 title: 'Подержка ESIM',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Стоимость',
@@ -98,18 +98,18 @@ export const products: IProducts[] = [
             },
             {
                 title: 'NFC',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Подержка ESIM',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
-                value: './logos/SubtractX.jpg',
-                type: CellType.Image,
+                value: false,
+                type: CellType.Boolean,
             },
             {
                 title: 'Стоимость',
@@ -148,18 +148,18 @@ export const products: IProducts[] = [
             },
             {
                 title: 'NFC',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Подержка ESIM',
-                value: './logos/SubtractX.jpg',
-                type: CellType.Image,
+                value: false,
+                type: CellType.Boolean,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Стоимость',
@@ -198,18 +198,18 @@ export const products: IProducts[] = [
             },
             {
                 title: 'NFC',
-                value: './logos/SubtractX.jpg',
-                type: CellType.Image,
+                value: false,
+                type: CellType.Boolean,
             },
             {
                 title: 'Подержка ESIM',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
-                value: './logos/SubtractX.jpg',
-                type: CellType.Image,
+                value: false,
+                type: CellType.Boolean,
             },
             {
                 title: 'Стоимость',
@@ -248,18 +248,18 @@ export const products: IProducts[] = [
             },
             {
                 title: 'NFC',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Подержка ESIM',
-                value: './logos/SubtractX.jpg',
-                type: CellType.Image,
+                value: false,
+                type: CellType.Boolean,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Стоимость',
@@ -298,18 +298,18 @@ export const products: IProducts[] = [
             },
             {
                 title: 'NFC',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Подержка ESIM',
-                value: './logos/SubtractV.jpg',
-                type: CellType.Image,
+                value: true,
+                type: CellType.Boolean,
             },
             {
                 title: 'Поддержка беспроводной зарядки',
-                value: './logos/SubtractX.jpg',
-                type: CellType.Image,
+                value: false,
+                type: CellType.Boolean,
             },
             {
                 title: 'Стоимость',

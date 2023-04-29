@@ -1,5 +1,6 @@
 .modalButton {
-    margin-top: 70px;
+    align-self: center;
+    padding-top: 40px;
 }
 .modalLabel {
     cursor: pointer;
@@ -114,13 +115,12 @@
 @media (max-width: 800px) {
     .container {
         position: absolute;
-        left: 25%;
     }
 }
 
 @media (max-width: 1200px) {
     .container {
         position: absolute;
-        left: 35%;
+        left: 25%;
     }
 }

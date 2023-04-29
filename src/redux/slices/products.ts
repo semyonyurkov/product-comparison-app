@@ -5,7 +5,7 @@ import { IState } from '../store';
 interface IRows {
     [key: string]: {
         type?: CellType;
-        values: string[];
+        values: (string | boolean)[];
     };
 }
 
@@ -35,8 +35,6 @@ const productsSlice = createSlice({
 export const { replaceProduct } = productsSlice.actions;
 
 export const productsReducer = productsSlice.reducer;
-
-// selectors
 
 export const selectProducts = (state: IState) => {
     const currentNumDisplay = state.numDisplay;

@@ -2,17 +2,20 @@ import { CellType } from '../../const/mock';
 
 interface IRowProps {
     title: string;
-    values: string[];
+    values: (string | boolean)[];
     type?: CellType;
     isDifferenceShown: boolean;
 }
 
-function renderValue(value: string, type?: CellType) {
+function renderValue(value: string | boolean, type?: CellType) {
     switch (type) {
         case CellType.Text:
             return value;
-        case CellType.Image:
-            return <img src={value} alt=""></img>;
+        case CellType.Boolean:
+            if (value) {
+                return <img src="./logos/SubtractV.jpg" alt=""></img>;
+            }
+            return <img src="./logos/SubtractX.jpg" alt=""></img>;
         default:
             return value;
     }

@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import styles from './Popover.module.css';
-import { ReactHTMLElement, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { selectOtherProducts } from '../../redux/slices/products';
 import { IState } from '../../redux/store';
 import { replaceProduct } from '../../redux/slices/products';
@@ -13,6 +13,22 @@ const Popover = (props: PopoverProps) => {
     const [isVisible, setIsVisible] = useState(false);
 
     const dispatch = useDispatch();
+
+    const root = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const onClick = (e: MouseEvent) => {
+            if (
+                isVisible &&
+                root.current &&
+                !root.current.contains(e.target as any)
+            ) {
+                setIsVisible(false);
+            }
+        };
+        document.addEventListener('click', onClick);
+        return () => document.removeEventListener('click', onClick);
+    }, [isVisible]);
 
     function replace(replaceId: number, targetId: number) {
         dispatch(replaceProduct({ replaceId, targetId }));
@@ -46,7 +62,7 @@ const Popover = (props: PopoverProps) => {
     });
 
     return (
-        <div className={styles.modalButton}>
+        <div ref={root} className={styles.modalButton}>
             <label
                 className={
                     rowProducts.length === 0 && !isVisible
