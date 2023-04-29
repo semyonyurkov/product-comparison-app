@@ -10,25 +10,25 @@ table {
     max-width: 1110px;
     margin: 0 auto;
 }
-thead th:nth-child(1) {
-    width: 30%;
+
+/* td:nth-child(1) {
+    width: 10%;
 }
 
-thead th:nth-child(2) {
-    width: 20%;
+td:nth-child(2) {
+    width: 10%;
 }
 
-thead th:nth-child(3) {
+td:nth-child(3) {
     width: 15%;
 }
 
-thead th:nth-child(4) {
-    width: 35%;
-}
-
+td:nth-child(4) {
+    width: 15%;
+} */
 th,
 td {
-    padding: 20px 0px 20px 0px;
+    padding: 40px 0px 40px 0px;
     text-align: start;
 }
 
@@ -42,14 +42,14 @@ th {
     line-height: 21px;
     text-transform: uppercase;
     color: #a4a9b9;
-    width: 200px;
+    width: 255px;
 }
 
 td {
+    padding-left: 30px;
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
     color: #3b4157;
     text-align: start;
-    padding-left: 15px;
 }

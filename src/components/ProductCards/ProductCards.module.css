@@ -1,7 +1,6 @@
 .phoneContainer {
-    margin-left: 15px;
     display: flex;
+    justify-content: space-between;
     width: 100%;
     align-items: center;
-    gap: 125px;
 }

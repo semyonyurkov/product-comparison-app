@@ -59,7 +59,6 @@ const Popover = (props: PopoverProps) => {
                 <img src="./logos/Vector50.jpg" alt="" />
             </label>
             <div
-                ref={popOverRef}
                 className={`${styles.container}  ${
                     isVisible ? styles.open : ''
                 }`}

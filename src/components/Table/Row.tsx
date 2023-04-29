@@ -24,7 +24,7 @@ export const Row = (props: IRowProps) => {
     }
     return (
         <tr>
-            <td>{props.title}</td>
+            <th>{props.title}</th>
             {props.values.map((value, index) => {
                 return <td key={index}>{renderValue(value, props.type)}</td>;
             })}

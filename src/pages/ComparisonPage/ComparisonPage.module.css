@@ -32,8 +32,8 @@
     display: flex;
     margin-top: 126px;
     gap: 7px;
-    width: 375px;
     margin-bottom: 74px;
+    margin-right: 80px;
 }
 
 .checkboxText {
@@ -42,4 +42,5 @@
     letter-spacing: 0.02em;
     color: #0d5adc;
     align-self: center;
+    width: 171px;
 }
