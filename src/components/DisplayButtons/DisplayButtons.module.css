@@ -20,9 +20,9 @@
     cursor: pointer;
     background: none;
     font-size: 18px;
-    line-height: 60px;
     letter-spacing: 0.02em;
     color: #0d5adc;
+    align-self: center;
 }
 
 .active {
@@ -31,8 +31,38 @@
     cursor: pointer;
     background: none;
     font-size: 18px;
-    line-height: 60px;
+    align-self: center;
     letter-spacing: 0.02em;
     color: #0d5adc;
     text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+    .buttons {
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .buttons {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 25px;
+        padding: 0px;
+    }
+
+    .button {
+        margin-bottom: 40px;
+    }
+
+    .buttonsText {
+        align-self: center;
+        font-size: 18px;
+        line-height: 60px;
+        letter-spacing: 0.02em;
+        color: #0d5adc;
+        margin: 0px;
+        padding: 0px;
+    }
 }

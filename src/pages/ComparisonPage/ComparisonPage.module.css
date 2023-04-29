@@ -44,3 +44,51 @@
     align-self: center;
     width: 171px;
 }
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+    .title {
+        padding: 0px 20px;
+        margin-bottom: 30px;
+    }
+    .contentContainer {
+        display: flex;
+        max-width: 1110px;
+        overflow: hidden;
+        margin: 0 auto;
+        overflow-x: scroll;
+        padding-left: 90px;
+    }
+    .checkbox {
+        display: flex;
+        margin-top: 126px;
+        gap: 7px;
+        position: absolute;
+        top: 305px;
+    }
+}
+
+@media (max-width: 800px) {
+    .titleContainer {
+        display: block;
+    }
+    .title {
+        text-align: center;
+    }
+    .contentContainer {
+        display: flex;
+        max-width: 1110px;
+        margin: 0 auto;
+        padding: 0px 40px;
+    }
+
+    .checkbox {
+        display: flex;
+        margin-top: 126px;
+        gap: 7px;
+        position: absolute;
+        top: 430px;
+    }
+}

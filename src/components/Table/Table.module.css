@@ -11,21 +11,6 @@ table {
     margin: 0 auto;
 }
 
-/* td:nth-child(1) {
-    width: 10%;
-}
-
-td:nth-child(2) {
-    width: 10%;
-}
-
-td:nth-child(3) {
-    width: 15%;
-}
-
-td:nth-child(4) {
-    width: 15%;
-} */
 th,
 td {
     padding: 40px 0px 40px 0px;
@@ -52,4 +37,25 @@ td {
     line-height: 21px;
     color: #3b4157;
     text-align: start;
+}
+
+@media (max-width: 1200px) {
+    table {
+        table-layout: auto;
+        border-collapse: collapse;
+        border-top: 1px solid #cdcfd2;
+    }
+    .container {
+        overflow: hidden;
+        overflow-x: scroll;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        overflow: hidden;
+        overflow-x: scroll;
+        padding: 40px;
+    }
 }
