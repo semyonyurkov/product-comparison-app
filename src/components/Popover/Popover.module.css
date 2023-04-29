@@ -21,6 +21,16 @@
     overflow: hidden;
     display: none;
 }
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+}
+
 .container.open {
     display: block;
 }

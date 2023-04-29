@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import styles from './Popover.module.css';
-import { useState } from 'react';
+import { ReactHTMLElement, useEffect, useRef, useState } from 'react';
 import { selectOtherProducts } from '../../redux/slices/products';
 import { IState } from '../../redux/store';
 import { replaceProduct } from '../../redux/slices/products';
@@ -59,6 +59,7 @@ const Popover = (props: PopoverProps) => {
                 <img src="./logos/Vector50.jpg" alt="" />
             </label>
             <div
+                ref={popOverRef}
                 className={`${styles.container}  ${
                     isVisible ? styles.open : ''
                 }`}

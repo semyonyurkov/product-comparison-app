@@ -23,18 +23,11 @@ const productsSlice = createSlice({
             const targetIndex = state.findIndex(
                 (product) => product.id === action.payload.targetId
             );
-            const targetProduct = state[targetIndex];
-            // const targetProduct = state.splice(targetIndex, 1);
-            state = JSON.parse(JSON.stringify(state));
-            let newState = [
-                ...state.slice(0, replaceIndex),
-                targetProduct,
-                ...state.slice(targetIndex + 1),
+
+            [state[replaceIndex], state[targetIndex]] = [
+                state[targetIndex],
                 state[replaceIndex],
             ];
-            console.log(replaceIndex, targetIndex, state, newState);
-            newState = JSON.parse(JSON.stringify(newState));
-            return newState;
         },
     },
 });
