@@ -110,3 +110,17 @@
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #000000;
 }
+
+@media (max-width: 800px) {
+    .container {
+        position: absolute;
+        left: 25%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        position: absolute;
+        left: 35%;
+    }
+}
